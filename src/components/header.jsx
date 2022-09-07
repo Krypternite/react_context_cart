@@ -10,7 +10,7 @@ const Header = () => {
   const total = useMemo(() => cart.reduce((acc, item) => acc + item.price * item.qty, 0), [cart]);
   return (
     <div className={styles.nav}>
-      <Link to="home">Home</Link>
+      <Link to="/">Home</Link>
       <Link to="cart">Cart({total})</Link>
     </div>
   );
