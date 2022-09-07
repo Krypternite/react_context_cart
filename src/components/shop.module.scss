@@ -1,0 +1,28 @@
+.shop {
+  height: calc(100% - 60px);
+
+  .title {
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .listing {
+    display: flex;
+    width: 100%;
+    background-color: aqua;
+    height: 100%;
+
+    .products {
+      padding: 1em;
+      background-color: #151414;
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.nav {
+    background: #2b4faa;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    > a {
+        font-weight: bold;
+        color: white;
+    }
+}
