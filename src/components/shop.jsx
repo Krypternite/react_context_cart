@@ -1,8 +1,6 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect} from 'react';
 import styles from './shop.module.scss';
-import shopReducer from './reducer.js';
 import Products from './products';
-import Cart from './cart';
 import { useStore } from '../context';
 
 const getProducts = () => fetch('https://dummyjson.com/products').then((res) => res.json());
