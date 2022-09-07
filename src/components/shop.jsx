@@ -16,7 +16,7 @@ const Shop = () => {
       });
     };
     loadProducts();
-  }, []);
+  }, [dispatch]);
   return (
     <div className={styles.shop}>
       <div className={styles.listing}>
