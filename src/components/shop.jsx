@@ -1,20 +1,20 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styles from './shop.module.scss';
 import Products from './products';
 import { useStore } from '../context';
 
 const getProducts = () => fetch('https://dummyjson.com/products').then((res) => res.json());
 const Shop = () => {
-  const {dispatch} = useStore();
-  const loadProducts = async () => {
-    const {products} = await getProducts();
-    dispatch({
-      type: 'ADD_PRODUCTS',
-      payload: products,
-    });
-  };
+  const { dispatch } = useStore();
 
   useEffect(() => {
+    const loadProducts = async () => {
+      const { products } = await getProducts();
+      dispatch({
+        type: 'ADD_PRODUCTS',
+        payload: products,
+      });
+    };
     loadProducts();
   }, []);
   return (
@@ -23,9 +23,7 @@ const Shop = () => {
         <div className={styles.products}>
           <Products />
         </div>
-        <div className={styles.cart}>
-          {/* <Cart/> */}
-        </div>
+        <div className={styles.cart}>{/* <Cart/> */}</div>
       </div>
     </div>
   );
